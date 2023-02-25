@@ -68,6 +68,7 @@ var f_o_html_from_o_js = function(
     }
     o_js._f_render = _f_render;
     o_js_outer._f_render = _f_render;
+    o_js_outer._o_html = o_html;
     return o_html;
 }
 
