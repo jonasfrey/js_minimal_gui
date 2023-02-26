@@ -1,8 +1,8 @@
 
 
 
-import {f_o_html_from_o_js} from "./../../f_o_html_from_o_js.module.js"
-//"https://deno.land/x/f_o_html_from_o_js@0.3/mod.js"
+// import {f_o_html_from_o_js} from "https://deno.land/x/f_o_html_from_o_js@0.4/mod.js"
+import {f_o_html_from_o_js} from "./mod.js"
 
 const o_style = document.createElement('style');
 o_style.innerHTML = `
@@ -57,27 +57,31 @@ if(!s_name){
 }
 var o_user = new O_user(s_name);
 
-var o_js_a_o_message = {
+window.o_js_a_o_message = {
     f_o_js: function(){
         return {
             class: "a_o_message",
             a_o:[
                 ...a_o_message.map(function(o){
                     return {
-                        a_o:[
-                            {
-                                class: "o_date",
-                                innerText: `${o.o_date.getHours()}: ${o.o_date.getMinutes()}:`
-                            }, 
-                            {
-                                class: "o_user.s_name",
-                                innerText: o.o_user.s_name
-                            }, 
-                            {
-                                class: "s_markdown",
-                                innerText: o.s_markdown
-                            }, 
-                        ]
+                        f_o_js: function(){
+                            return {
+                                a_o:[
+                                    {
+                                        class: "o_date",
+                                        innerText: `${o.o_date.getHours()}: ${o.o_date.getMinutes()}:`
+                                    }, 
+                                    {
+                                        class: "o_user.s_name",
+                                        innerText: o.o_user.s_name
+                                    }, 
+                                    {
+                                        class: "s_markdown",
+                                        innerText: o.s_markdown
+                                    }, 
+                                ]
+                            }
+                        }
 
                     }
                 })

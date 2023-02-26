@@ -1,8 +1,7 @@
 
 
 
-import {f_o_html_from_o_js} from "./f_o_html_from_o_js.module.js"
-//"https://deno.land/x/f_o_html_from_o_js@0.3/mod.js"
+import {f_o_html_from_o_js} from "https://deno.land/x/f_o_html_from_o_js@0.4/mod.js"
 
 var o_div_main = document.createElement("div");
 document.body.appendChild(o_div_main)
@@ -38,6 +37,7 @@ var o_js_a_o_user = {
             a_o:[
                 ...a_o_user.map(function(o_user){
                     return {
+                        
                         s_tag: "div",
                         innerText: o_user.s_name
                     }
